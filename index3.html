@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Portfolio Tracker</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+
+<body>
+    <div class="container1">
+        <h1>Investment Portfolio Tracker</h1>
+    </div>
+    <div class="container">
+        <div class="side-panel">
+            <h2>Total Portfolio Value:<span id="totalValue">0</h2>
+            <form>
+                <input type="text" id="assetName" placeholder="Asset Name" required>
+                <input type="number" id="amountInvested" placeholder="Amount Invested" required>
+                <input type="number" id="currentValue" placeholder="Current Value" required>
+            </form>
+            <button onclick="addInvestment()">Add Investment</button>
+        </div>
+
+        <div class="main-panel">
+            <h2>Your Investments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Asset Name</th>
+                        <th>Invested</th>
+                        <th>Current Value</th>
+                        <th>% Change</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="investmentTable"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="chart-container1">
+        <div class="chart-container">
+            <p>Chart will be displayed here</p>
+            <canvas id="portfolioChart"></canvas>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script3.js"></script>
+</body>
+
+</html>
